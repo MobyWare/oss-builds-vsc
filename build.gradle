@@ -8,12 +8,15 @@ buildscript {
 }
 
 apply plugin: 'java'
+apply plugin: 'application'
 
 
 jar {
     baseName = 'com.mobyware.sqsClient'
     version =  '0.0.1'
 }
+
+mainClassName = 'com.mobyware.sqsClient.AmazonQueueClient'
 
 repositories {
     mavenCentral()
