@@ -45,6 +45,7 @@ public class AmazonQueueClient{
 
         ReceiveMessageRequest receiveMessage = new ReceiveMessageRequest(queueURL);
         List<Message> messages = sqs.receiveMessage(receiveMessage).getMessages();
+        System.out.println("Received " + messages.size() + " message(s)");
         for (Message message : messages) {
             System.out.println("  Message");
             System.out.println("    MessageId:     " + message.getMessageId());
